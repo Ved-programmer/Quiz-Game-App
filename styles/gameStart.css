@@ -1,0 +1,29 @@
+.headingBackground{
+    background-color : var(--container1Color);
+
+    --vertical-padding : 5vh;
+    padding-bottom : var(--vertical-padding);
+    padding-top : var(--vertical-padding);
+}
+
+.subtitleBackground{
+    background-color : var(--container2Color);
+    margin-top: 0;
+}
+
+.startPlaying{
+    background-color : var(--container1Color);
+    color : var(--textColor2);
+
+    width : 80%;
+    font-size: 3em;
+    font-weight: bold;
+
+    border: solid 5px red;
+}
+
+.startPlaying:hover{
+    background-color : var(--container2ColorBright2);
+}
+
+
