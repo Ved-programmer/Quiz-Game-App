@@ -1,85 +1,69 @@
-html, body{
-    height:100%;
-}
-
-#page{
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-}
-
-#question-info{
-    flex: 0 1 auto;
-}
-
-#options{
-    flex: 1 1 auto;
-    /* background-color: white; */
-}
-
-.headingBackground {
-    background-color : var(--container1Color);
-
-    --vertical-padding : 1vh;
-    padding-bottom : var(--vertical-padding);
-    padding-top : var(--vertical-padding);
-}
-
-.heading {
-    font-size : 2em;
+.startPlayingContainer {
     text-decoration: none;
-}
-
-#questionNumber {
-    float : right;
-    margin-right : 5vw;
-    font-size: 1.5em;
-}
-
-.timer {
-    width : 8vw;
-    height : 8vw;
-
-    margin-top : 10vh;
-    margin-left : 2.5vw;
-
-    background-color : blue;
-    border-radius : 50%;
-
-    font-size: 5em;
-}
-
-
-#optionsList {
-    display : grid;
-    height : 100%;
-
-    grid-template-columns: 1fr 1fr;
+    font-weight : 500;
+    font-size : 3em;
     
-    grid-auto-rows: minmax(50%, auto);
+    color : white;
+    background-color: var(--container1ColorBright1);
+}
+
+.oval { 
+    height: 25vh;
+    width: 25vw;
+    border-radius: 50%;
+}
+
+.rect {
+    width : inherit;
+}
+
+.startPlayingContainer:hover {
+    background-color: var(--container1ColorBright2);
+}
+
+
+/* Description Styling */
+
+.descriptionMain {
+    width : 100%;
+    background-color : var(--container2Color);
+    color : var(--textColor2);
+
+    --vertical-padding : 5vh;
+    padding-top : var(--vertical-padding);
+    padding-bottom : var(--vertical-padding);
+}
+
+.descriptionContent {
+
+    padding-bottom : 5vh;
+
+    /* background-color: black; */
+    display : grid;
+    grid-template-columns: 40% 40%;
+    justify-content : space-around;
+    row-gap: 10vh;
+    align-items: center;
+
+    font-size : 1.75em;
 
 }
 
-.option{
-    font-size : 2em;
+img {
+    width : 100%;
+}
+
+.description-item{
+    width : 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.innerStartPlayingButton{
     display : flex;
-
-    justify-content : center;
-    align-items : center;
+    /* margin : auto; */
+    justify-content: center;
+    width : 100%;
 }
 
-.option-1{
-    background-color : red;
-}
-
-.option-2{
-    background-color : blue;
-}
-
-.option-3{
-    background-color : yellow;
-}
-
-.option-4{
-    background-color : green;
-}
