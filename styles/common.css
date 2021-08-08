@@ -1,1 +1,85 @@
+:root {
+    --backgroundColor : #162053;
 
+    --container1Color : #3f2463;
+    --container1ColorBright1 : #834dca;
+    --container1ColorBright2 :rgb(163, 93, 255);
+
+    --container2Color : #431031;
+    --container2ColorBright1 : #6e164f;
+    --container2ColorBright2 : #8a2265;
+
+    --textColor1 : #c7278f;
+    --textColor2 : #6287ff; 
+}
+
+body {
+    background-color: var(--backgroundColor);
+    color: white;
+    margin : 0;
+}
+
+.heading {
+    text-decoration: underline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4em;
+    
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    width : 100%;
+
+    color: var(--textColor1);
+}
+
+.subTitle {
+    display:flex; 
+    flex-wrap:nowrap;
+    justify-content: space-around;
+}
+
+.subTitleText {
+    font-size: 3em;
+    color : var(--textColor2);
+    font-weight : bold;
+    text-decoration : overline underline;
+    font-style :italic;
+}
+
+.openText {
+    width : inherit;
+    text-align : center;
+    font-size : 3em;
+}
+
+.centerContainer {
+    display: flex;
+    display: -webkit-flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    text-align : center;
+}
+
+.backButton{
+    display: flex;
+    position: fixed;
+
+    width : 10vw;
+    height : 5vh;
+
+    background-color: red;
+    color : white;
+    border :solid rgb(255, 255, 255) 3px;
+
+    justify-content : center;
+    align-items: center;
+
+    font-size : 1.5em;
+    text-decoration: none;
+}
+
+.backButton:hover{
+    background-color : rgb(138, 0, 0);
+}
