@@ -63,9 +63,9 @@
 
     the optionsList would contain the options for a question in a session. The number of options would vary based on each question.
 
-    Each option would be a button which would be created by "session.js", the function that the button would call would be "answer" which would take in a parameter, the parameter would be the option clicked by the user. 
+    Each option would be a button which would be created by "session.js", the function that the button would call would be "provideAnswer" which would take in a parameter, the parameter would be the option clicked by the user. 
 
-    The "answer" function would check the option which is clicked and if correct, it would add the points in the currentScore.
+    The "provideAnswer" function would check the option which is clicked and if correct, it would add the points in the currentScore.
 
     It would also tell the user if the answer was correct, if the answer was wrong then it would also show the correct answer.
 
