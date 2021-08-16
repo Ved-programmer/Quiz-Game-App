@@ -77,7 +77,7 @@ function provideAnswer(answer){
     }
 
     else if(currentQuestion.answer == answer){
-        answerStatus = "You chose the correct option!, your speed will determine your points"
+        answerStatus = "You chose the correct option! Your speed will determine your points"
         answerCorrect = true;
     }
 
@@ -102,4 +102,4 @@ function provideAnswer(answer){
     storeData(answer, answerStatus, answerCorrect, pointsGiven, timeTaken)
 
     window.location.replace("score.html");
-}
+} 
