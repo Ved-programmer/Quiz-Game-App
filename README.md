@@ -115,7 +115,6 @@
         - Ending Title
         - High Score
         - Score
-        - Score status
         - Ending Description
         - Quiz restart button
         - OPTIONAL : quiz questions review
@@ -123,5 +122,3 @@
 <br>
 
 > Made by [Ved Rathi](https://ved-programmer.github.io/)
-
-
