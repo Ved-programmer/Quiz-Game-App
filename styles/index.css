@@ -1,12 +1,3 @@
-.startPlayingContainer {
-    text-decoration: none;
-    font-weight : 500;
-    font-size : 3em;
-    
-    color : white;
-    background-color: var(--container1ColorBright1);
-}
-
 .oval { 
     height: 25vh;
     width: 25vw;
@@ -60,10 +51,4 @@ img {
     justify-content: center;
 }
 
-.innerStartPlayingButton{
-    display : flex;
-    /* margin : auto; */
-    justify-content: center;
-    width : 100%;
-}
 
