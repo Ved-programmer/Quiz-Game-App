@@ -1,0 +1,28 @@
+.subTitle > *{
+    border : 3px solid red;
+    border-radius: 20px;
+    --verticalPadding : 1.5%;
+    --horizontalPadding : 5%;
+    
+    padding-left : var(--horizontalPadding);
+    padding-right : var(--horizontalPadding);
+    padding-top : var(--verticalPadding);
+    padding-bottom : var(--verticalPadding);
+}
+
+.subTitleText {
+    text-decoration: none;
+}
+
+.endingDescription {
+    display : flex;
+    width : 90%;
+    margin : auto;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size : 2em;
+}
+
