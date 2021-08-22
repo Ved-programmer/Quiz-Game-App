@@ -19,8 +19,8 @@ var questions = [
     ),
 
     new Question(
-        "In what python version was the walrus operator introduced",
-        ["3.8", "3.9", "3.10"],
+        "What is the sign of the walrus operator",
+        [":=", "==", "+="],
         20,
         0
     ),
@@ -54,6 +54,7 @@ var numberOfQuestions = questions.length
 function getCurrentQuestionNumber(){
     if(localStorage['currentQuestion'] == undefined) {
         localStorage['currentQuestion'] = 0
+        localStorage["questionCompleted"] = "false"
     }
     return getFromStorage('currentQuestion', "int")
 }
@@ -83,10 +84,14 @@ function incrementCurrentScore(increment){
 
 function moveToNextQuestion(){
     if(getCurrentQuestionNumber() + 1 < numberOfQuestions){
-
         localStorage["currentQuestion"] = getCurrentQuestionNumber() + 1
         return true;
     }
+
+    localStorage["currentQuestion"] = 0
+    localStorage["previousScore"] = localStorage["currentScore"]
+    localStorage["questionCompleted"] = "false"
+    localStorage["currentScore"] = 0
     return false;
 }
 
@@ -114,3 +119,22 @@ function getFromStorage(variable, type = "str"){
 
     return value
 }
+
+valuesToSet = {
+    "quizTitle" : quizTitle,
+    "highScore" : getHighScore(),
+    "numberOfQuestions" : numberOfQuestions,
+}
+
+for (const valueToSet in valuesToSet) {
+    console.log(valueToSet)
+    console.log(valuesToSet[valueToSet])
+    try{
+        document.getElementById(valueToSet).innerHTML = valuesToSet[valueToSet]
+    }
+    catch(err) {
+        console.log(valueToSet)
+        continue;
+    }
+}
+
