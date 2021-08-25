@@ -20,29 +20,20 @@ function createOptions(question){
     }
 }
 
-currentQuestion = getCurrentQuestion()
-
-createOptions(currentQuestion)
-document.getElementById("questionTitle").innerHTML = currentQuestion.question
-document.getElementById("questionNumber").innerHTML = getQuestionProgress()
-
-var timer = document.getElementById("timeKeeper")
-var timerOn = true;
-timerChange(timer, currentQuestion.time)
 
 
 function timerChange(someElement, i){
     if(!timerOn){
         return;
     }
-
+    
     if(i < 0){
         provideAnswer(null);
         return;
     }
-
+    
     someElement.innerHTML = i
-
+    
     setTimeout(timerChange, 1000, someElement, i - 1)
 }
 
@@ -53,53 +44,68 @@ function storeData(answer, answerStatus, answerCorrect, pointsGiven, timeTaken){
     localStorage["pointsGiven"] = pointsGiven
     localStorage["timeTaken"] = timeTaken
     localStorage["time"] = timer.innerHTML
+    localStorage["questionCompleted"] = "true"
 }
 
-function givePoints(){
 
+
+function givePoints(){
+    
     timeLeft = parseInt(timer.innerHTML)
     questionTime = parseInt(currentQuestion.time)
     timeTaken = questionTime - timeLeft
     pointsToGive = timeLeft/questionTime * 1000
-
+    
     incrementCurrentScore(pointsToGive);
-
+    
     return [pointsToGive, timeTaken]
 }
 
 function provideAnswer(answer){
     timerOn = false;
     answerCorrect = false;
-
+    
     if(answer == null){
         answer = "none chosen"
         answerStatus = "the time was up! you get no points, be quick next time."
     }
-
+    
     else if(currentQuestion.answer == answer){
         answerStatus = "You chose the correct option! Your speed will determine your points"
         answerCorrect = true;
     }
-
+    
     else{
         answerStatus = "You chose the wrong option, better luck next time ):"
-        timeTaken = currentQuestion.time
     }
-
+    
     // console.log(answer)
-
+    
     if (answerCorrect){
         output = givePoints()
         pointsGiven = output[0]
         timeTaken = output[1]
     }
-
+    
     else {
         pointsGiven = 0
-        timeTaken = currentQuestion.time
+        timeTaken = parseInt(currentQuestion.time) - parseInt(timer.innerHTML)
+        
     }
-
+    
     storeData(answer, answerStatus, answerCorrect, pointsGiven, timeTaken)
-
+    
     window.location.replace("score.html");
 } 
+
+currentQuestion = getCurrentQuestion()
+
+createOptions(currentQuestion)
+document.getElementById("questionTitle").innerHTML = currentQuestion.question
+document.getElementById("questionNumber").innerHTML = getQuestionProgress()
+
+var timer = document.getElementById("timeKeeper")
+var timerOn = true;
+timerChange(timer, currentQuestion.time)
+
+localStorage["questionCompleted"] = "false"
