@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Start</title>
+    <link rel = "stylesheet" href = "styles/common.css">
+    <link rel="stylesheet" href="styles/gameStart.css">
+
+</head>
+<body>
+
+    <a href="index.html" class = "backButton">
+        <p>Go Back</p>
+    </a>
+
+    <h1 class = "heading headingBackground">&nbsp;<span id = "quizTitle">Quiz Title</span>&nbsp;</h1>
+
+    <div class = "subTitle subtitleBackground">
+
+        <p class = "subTitleText" style = "color:white">&nbsp;Play the quiz now!&nbsp;</p>
+
+        <p class = "subTitleText" style = "color:white">&nbsp;<span id = "numberOfQuestions"></span> Questions&nbsp;</p>
+
+    </div>
+
+    <br>
+
+    <div>
+        <p class = "openText">Current High Score - <span id = "highScore"></span></p>
+    </div>
+
+    <br>
+
+    <a id = "nextPage" href="session.html" style = "text-decoration: none;">
+        <div class = "centerContainer">
+            <div class = "startPlaying">
+                <p>Start Playing</p>
+            </div>
+        </div>
+    </a>
+
+
+</body>
+
+<script src="scripts/data.js"></script>
+<script src="scripts/gameStart.js"></script>
+
+</html>
