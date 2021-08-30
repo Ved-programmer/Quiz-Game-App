@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/score.css">
+</head>
+
+<body>
+
+    <div id = "data">
+        
+        <div id = "scoreData">
+            <p id = "currentScore">Current Score</p>
+            <p id = "high-score">High Score</p>
+            <p id = "questionNumber">Current Question</p>
+            <p id = "pointsIncrement">Points You Got</p>
+            <p id = "answer">Correct Answer</p>
+            <p id = "timeTaken">Time Taken(in seconds)</p>
+            <p id = "chosenAnswer">Answer Chosen</p>
+            <p id = "previousPoints">Previous Points</p>
+            <p id = "answerStatus"></p>
+        </div>
+
+        <div id = "questionData">
+            <p id = "question"></p>
+
+            <ul id = "options"></ul>
+        </div>
+
+    </div>
+
+
+
+    <button id = "nextQuestionButton" onclick = "changeQuestion()">Proceed</button>
+
+</body>
+
+<script src="scripts/data.js"></script>
+<script src="scripts/score.js"></script>
+
+</html>
