@@ -30,8 +30,6 @@
     
     Once all the sessions are done then the user would be able to see the final score, the high score ever scored by the user.
     
-    Optional : The user would be able to review the quiz with the questions and answers.  
-
     </ul>
 
 <br>
@@ -50,8 +48,6 @@
     once a session is completed then it would redirect to "score.html" which would show information regarding the score which would then redirect back to "session.html" which would have the new information from the new question.
 
     once all the sessions are completed then "conclusion.html" would take over, this would conclude the quiz
-
-    Optional : In the "conclusion.html", the user would also be able to see the questions and review the answers.  
 
     </ul>
 
@@ -72,17 +68,6 @@
     NOTE : If the user runs out of time then a "null" parameter would be passed to the "answer" function and no points would be given.
 
     </ul>
-
-<br>
-
-* ## Variables between the UI and the backend.
-    - highScore(variable) - representing the high score by the user(localStorage)
-    - currentQuestion(variable) - representing the current question the user is on(localStorage)
-    - currentScore(variable) - representing the current score of the user(localStorage)
-    - optionsList(id) - representing the 'div' which would contain all the options, this would be div which would be populated by options by "session.js"
-    - timeKeeper(id) - the 'text' which would represent the timer for each question, it would be updated by "session.js"
-    - questionTitle(id) - the main 'question' text 
-    - answer(function) - The function which would be called when the user clicks on an option
 
 <br>
 
@@ -117,7 +102,6 @@
         - Score
         - Ending Description
         - Quiz restart button
-        - OPTIONAL : quiz questions review
 
 <br>
 
