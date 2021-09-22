@@ -7,7 +7,6 @@
 <font size = "5">A quiz game, this game would have a bunch of questions and a scoring system. It would be similar to kahoot/quizziz</font>
 
 <br>
-<br>
 
 </center>
 
